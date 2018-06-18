@@ -1,0 +1,18 @@
+<ips:template parameters="$author, $area" />
+{{if $author->isBirthday()}}
+    {{if $area == "infoList"}}
+        <div class="birthdayIndicator_infoList" _title="{lang="birthdayInPost_message" sprintf="$author->name"}" data-ipsTooltip>
+            {{if \IPS\Member::loggedIn()->member_id && !$author->members_disable_pm and !\IPS\Member::loggedIn()->members_disable_pm and \IPS\Member::loggedIn()->canAccessModule( \IPS\Application\Module::get( 'core', 'messaging' ) )}}
+                <a href='{url="app=core&module=messaging&controller=messenger&do=compose&to={$author->member_id}" seoTemplate="messenger_compose"}' data-ipsDialog data-ipsDialog-title='{lang="compose_new"}' data-ipsDialog-remoteSubmit data-ipsDialog-flashMessage="{lang="message_sent"}" data-ipsDialog-forceReload><i class="fa fa-birthday-cake"></i></a>
+            {{else}}
+                <span><i class="fa fa-birthday-cake"></i></span>
+            {{endif}}
+        </div>
+    {{endif}}
+
+    {{if $area == "username"}}
+        <span class="birthdayIndicator_username" _title="{lang="birthdayInPost_message" sprintf="$author->name"}" data-ipsTooltip>
+            <i class="fa fa-birthday-cake"></i>
+        </span>
+    {{endif}}
+{{endif}}

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 [
     {
         "key": "birthdayInPost_area",
         "default": "infoList"
     }
 ]
+=======
+[{"key":"birthdayInPost_area","default":"infoList"}]
+>>>>>>> 01fbfe311fa359128ae9e833adf331423f6615e2

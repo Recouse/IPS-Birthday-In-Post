@@ -30,4 +30,16 @@ class hook127 extends _HOOK_CLASS_
 
         return false;
     }
+
+    // public function age()
+    // {
+    //     if (empty($this->bday_year)) {
+    //         return NULL;
+    //     }
+
+    //     $bdayYear = (int) $this->bday_year;
+    //     $currentYear = (int) date('Y');
+
+    //     return $currentYear - $bdayYear;
+    // }
 }
